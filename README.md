@@ -2,7 +2,7 @@
 
 This is an application I built to practice Angular and understand it's general layout and process. It currently runs on a local server that the user needs to start by running `npm run server`. This is v1.0.0 where you can add tasks, mark them to serve as a reminder and delete tasks once they are finished. v1.0.2 will allow users to update already created tasks. v2.0.0 will run on a realtime server using Express.js and PostgreSQL.
 
-![screenshot]("../../src/img/tasktracker.png")
+![screenshot]("./src/img/tasktracker.png")
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
 
