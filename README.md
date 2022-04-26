@@ -4,7 +4,7 @@ This is an application I built using Angular as an assessment for a company but 
 
 This is v1.0.0 where you can add tasks, descriptions, tags and due dates.  You can organize them alphabetically or by date.  The next update will run on a realtime server using TypeScript, Express and PostgreSQL.  The repo for the backend can be found [here](https://github.com/CollinClifford/todolist-be).  In the version after that I will implement password encryption so that the user can safely access their list of tasks.
 
-![screenshot]()
+![screenshot](./src/img/toDoApplication.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
 

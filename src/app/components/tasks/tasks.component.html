@@ -1,10 +1,9 @@
-<app-button
-color="gray"
-text="{{ showOrder ? 'Alphabetical' : 'Chronological' }}"
-(btnClick)="toggleAlph()"
-></app-button>
-
 <app-add-task (onAddTask)="addTask($event)"></app-add-task>
+<app-button
+  color="gray"
+  text="{{ showOrder ? 'Alphabetical' : 'Chronological' }}"
+  (btnClick)="toggleAlph()"
+></app-button>
 <app-task-item
   *ngFor="let task of tasks"
   [task]="task"

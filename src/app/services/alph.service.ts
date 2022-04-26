@@ -6,7 +6,7 @@ import { Observable, Subject } from 'rxjs';
 })
 
 export class AlphService {
-  private showAlp: boolean = false;
+  private showAlp: boolean = true;
   private subject = new Subject<any>();
 
   constructor() {}

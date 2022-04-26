@@ -3,17 +3,16 @@
   class="task"
   (dblclick)="onToggle(task)"
 > -->
-<div [ngStyle]="{ backgroundColor: 'gray', margin: '2px', padding: '10px' }">
+<div class="task">
   <h3>
     {{ task.title }}
-    <fa-icon
-      (click)="onDelete(task)"
-      [ngStyle]="{ color: 'red' }"
-      [icon]="faTimes"
-    ></fa-icon>
   </h3>
-  <p>{{ task.description }}</p>
-  <p>{{ task.due_date }}</p>
-  <p>{{ task.tags }}</p>
+  <p>Descrition: {{ task.description }}</p>
+  <p>Due Date: {{ task.due_date }}</p>
+  <p>Tags: {{ task.tags }}</p>
+  <button class="delete"
+    (click)="onDelete(task)"
+    [ngStyle]="{ color: 'red' }"
+  >DELETE</button> 
 </div>
 <!-- </div> -->
