@@ -1,8 +1,10 @@
-# Task Tracker
+# To Do Application
 
-This is an application I built to practice Angular and understand it's general layout and process. It currently runs on a local server that the user needs to start by running `npm run server`. This is v1.0.0 where you can add tasks, mark them to serve as a reminder and delete tasks once they are finished. v1.0.2 will allow users to update already created tasks. v2.0.0 will run on a realtime server using Express.js and PostgreSQL.
+This is an application I built using Angular as an assessment for a company but also as a learning tool for a framework I'm unfamiliar with. It currently runs on a local server that the user needs to start by running `npm run server`.  To run the app, the user must use the command `npm start`.  Please makse sure to run `npm install` to install any dependencies my app may have.
 
-![screenshot](src/img/tasktracker.png)
+This is v1.0.0 where you can add tasks, descriptions, tags and due dates.  You can organize them alphabetically or by date.  The next update will run on a realtime server using TypeScript, Express and PostgreSQL.  The repo for the backend can be found [here](https://github.com/CollinClifford/todolist-be).  In the version after that I will implement password encryption so that the user can safely access their list of tasks.
+
+![screenshot]()
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.2.
 

@@ -11,9 +11,11 @@ import { Task } from 'src/app/Task';
 export class AddTaskComponent implements OnInit {
   @Output() onAddTask: EventEmitter<Task> = new EventEmitter();
 
-  text!: string;
-  day!: string;
-  reminder: boolean = false;
+  id: number = 1;
+  title!: string;
+  description!: string;
+  due_date!: string;
+  tags!: string;
   showAddTask!: boolean;
   subscription: Subscription;
 
@@ -26,20 +28,22 @@ export class AddTaskComponent implements OnInit {
   ngOnInit(): void {}
 
   onSubmit() {
-    if (!this.text) {
+    if (!this.title) {
       alert('Please add a task');
       return;
     }
     const newTask = {
-      text: this.text,
-      day: this.day,
-      reminder: this.reminder,
+      title: this.title,
+      description: this.description,
+      due_date: this.due_date,
+      tags: this.tags,
     };
 
     this.onAddTask.emit(newTask);
 
-    this.text = '';
-    this.day = '';
-    this.reminder = false;
+    this.title = '';
+    this.description = '';
+    this.due_date = '';
+    this.tags = '';
   }
 }

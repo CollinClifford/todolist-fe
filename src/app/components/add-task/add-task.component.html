@@ -4,29 +4,28 @@
     ><input
       type="text"
       name="text"
-      [(ngModel)]="text"
+      [(ngModel)]="title"
       id="test"
       placeholder="Add Task"
     />
   </div>
   <div class="form-control">
-    <label for="day">Day & Time</label
-    ><input
+    <label for="description"> Description </label>
+    <input
       type="text"
-      name="day"
-      [(ngModel)]="day"
-      id="day"
-      placeholder="Add Day & Time"
+      name="desc"
+      [(ngModel)]="description"
+      id="desc"
+      placeholder="Enter a Description"
     />
   </div>
-  <div class="form-control form-control-check">
-    <label for="reminder">Set Reminder</label
-    ><input
-      type="checkbox"
-      name="reminder"
-      [(ngModel)]="reminder"
-      id="reminder"
-    />
+  <div class="form-control">
+    <label for="day">Due Date</label
+    ><input type="date" name="day" [(ngModel)]="due_date" id="day" />
+  </div>
+  <div class="form-control">
+    <label for="tags">Tags</label>
+    <input type="text" name="tags" [(ngModel)]="tags" id="tag" />
   </div>
   <input type="submit" value="Save Task" class="btn btn-block" />
 </form>
