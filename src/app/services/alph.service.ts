@@ -6,6 +6,7 @@ import { Observable, Subject } from 'rxjs';
 })
 
 export class AlphService {
+  // standard service for organization of todos
   private showAlp: boolean = true;
   private subject = new Subject<any>();
 

@@ -27,11 +27,15 @@ export class AddTaskComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  
   onSubmit() {
+    // simple error handling, constructs the task object and 
     if (!this.title) {
       alert('Please add a task');
       return;
     }
+
+    // constructs new object based on user input
     const newTask = {
       title: this.title,
       description: this.description,
@@ -39,8 +43,10 @@ export class AddTaskComponent implements OnInit {
       tags: this.tags,
     };
 
+    // sends task to service
     this.onAddTask.emit(newTask);
 
+    // resets form
     this.title = '';
     this.description = '';
     this.due_date = '';

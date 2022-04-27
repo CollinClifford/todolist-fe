@@ -12,7 +12,6 @@ import { AlphService } from 'src/app/services/alph.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent implements OnInit {
-  title: string = 'Task Tracker';
   showAddTask!: boolean;
   showOrder!: boolean;
   subscription!: Subscription;
@@ -32,10 +31,12 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  // activates alph/chron toggle button
   toggleAlph() {
     this.alphService.toggleAlph();
   }
 
+  // shows the form
   toggleAddTask() {
     this.uiService.toggleAddTask();
   }

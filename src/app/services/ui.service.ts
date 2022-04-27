@@ -9,7 +9,8 @@ export class UiService {
   private subject = new Subject<any>();
 
   constructor() {}
-
+  
+  // adds toggle service for add-form
   toggleAddTask(): void {
     this.showAddTask = !this.showAddTask;
     this.subject.next(this.showAddTask);

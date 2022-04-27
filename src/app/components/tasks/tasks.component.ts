@@ -17,29 +17,33 @@ export class TasksComponent implements OnInit {
 
   constructor(
     private taskService: TaskService,
-    private uiService: UiService,
     private alphService: AlphService
   ) {
-    
     this.subscription = this.alphService
       .onAlphToggle()
       .subscribe((value) => (this.showOrder = value));
   }
 
+  // determines where the sort list is and pulls the information from API in the order
   toggleAlph() {
     this.alphService.toggleAlph();
     if (this.showOrder) {
-      this.taskService.getTasksByName().subscribe((tasks) => (this.tasks = tasks));
+      this.taskService
+        .getTasksByName()
+        .subscribe((tasks) => (this.tasks = tasks));
     } else {
-      this.taskService.getTaskByDate().subscribe((tasks) => (this.tasks = tasks));
+      this.taskService
+        .getTaskByDate()
+        .subscribe((tasks) => (this.tasks = tasks));
     }
   }
 
+  // initiates with standard api call
   ngOnInit(): void {
-    
     this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
   }
 
+  // filters based on click and deletes
   deleteTask(task: Task) {
     this.taskService
       .deleteTask(task)
@@ -48,6 +52,7 @@ export class TasksComponent implements OnInit {
       );
   }
 
+  // attaches to service
   addTask(task: Task) {
     console.log(task);
     this.taskService.addTask(task).subscribe((task) => this.tasks.push(task));
